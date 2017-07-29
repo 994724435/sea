@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>自由场</title>
+	<script type="text/javascript" src="__ROOT__/Public/Home/js/fontSize.js"></script>
+	<link rel="stylesheet" href="__ROOT__/Public/Home/css/common.css">
+	<link rel="stylesheet" href="__ROOT__/Public/Home/css/style.css">
+	<script type="text/javascript" src="__ROOT__/Public/Home/layer_mobile/layer.js"></script>
+	<script type="text/javascript" src="__ROOT__/Public/Home/js/jquery-3.1.1.min.js"></script>
+	<style type="text/css">
+		body{background: url('__ROOT__/Public/Home/img/game/free.png') repeat-x #0c3667;background-size: 100% auto;box-sizing: border-box;border-top: 1px solid transparent;}
+	   #fishs{margin-top: .5rem;}
+		body .layui-m-layer .layui-m-layer-msg{bottom: 0;}
+		.fish:nth-child(2n+1){
+			transform:rotateY(180deg);
+		}
+		 @keyframes fish1
+		{
+			from {left: 0rem;}
+			to {left: -0.2rem;}
+		}
+		@-webkit-keyframes fish1
+		{
+			from {left: 0rem;}
+			to {left: -0.2rem;}
+		}
+		 @keyframes fish2
+		{
+			from {left: 1rem;top: 0rem;}
+			to {left: .8rem;top: .2rem;}
+		}
+		@-webkit-keyframes fish2
+		{
+			from {left: 1rem;top: 1rem;}
+			to {left: .8rem;top: 1.2rem;}
+		}
+		 @keyframes fish3
+		{
+			from {left: 1rem;top: 1rem;}
+			to {left: .8rem;top: .8rem;}
+		}
+		@-webkit-keyframes fish3
+		{
+			from {left: 1rem;top: 1rem;}
+			to {left: .8rem;top: .8rem;}
+		}
+		 @keyframes fish4
+		{
+			from {left: 1rem;}
+			to {left: 1.2rem;}
+		}
+		@-webkit-keyframes fish4
+		{
+			from {left: 1rem;}
+			to {left: 1.2rem;}
+		}
+		 @keyframes fish5
+		{
+			from {left: 2rem;}
+			to {left: 2.2rem;}
+		}
+		@-webkit-keyframes fish5
+		{
+			from {left: 2rem;}
+			to {left: 2.2rem;}
+		}
+		 @keyframes fish6
+		{
+			from {left: 3rem;}
+			to {left: 2.9rem;}
+		}
+		@-webkit-keyframes fish6
+		{
+			from {left: 3rem;}
+			to {left: 2.9rem;}
+		}
+		 @keyframes fish7
+		{
+			from {left: 4rem;}
+			to {left: 4.2rem;}
+		}
+		@-webkit-keyframes fish7
+		{
+			from {left: 4rem;}
+			to {left: 4.2rem;}
+		}
+		 @keyframes fish8
+		{
+			from {left: 5rem;}
+			to {left: 4.9rem;}
+		}
+		@-webkit-keyframes fish8
+		{
+			from {left: 5rem;}
+			to {left: 4.9rem;}
+		}
+		.fish:nth-child(6n+1){
+			animation: fish1 1s linear infinite alternate;
+			-moz-animation: fish1 1s linear infinite alternate;	/* Firefox */
+			-webkit-animation: fish1 1s linear infinite alternate;	/* Safari 和 Chrome */
+			-o-animation: fish1 1s linear infinite alternate;	/* Opera */
+		}
+		.fish:nth-child(2){
+			animation: fish2 1s linear infinite alternate;
+			-moz-animation: fish2 1s linear infinite alternate;	/* Firefox */
+			-webkit-animation: fish2 1s linear infinite alternate;	/* Safari 和 Chrome */
+			-o-animation: fish2 1s linear infinite alternate;	/* Opera */
+		}
+		.fish:nth-child(8){
+			-webkit-animation: fish3 1s linear infinite alternate;	/* Safari 和 Chrome */
+		}
+		.fish:nth-child(14),.fish:nth-child(20){
+			-webkit-animation: fish4 1s linear infinite alternate;	/* Safari 和 Chrome */
+		}
+		.fish:nth-child(6n+3){
+			-webkit-animation: fish5 1s linear infinite alternate;	/* Safari 和 Chrome */
+		}
+		.fish:nth-child(6n+4){
+			-webkit-animation: fish6 1s linear infinite alternate;	/* Safari 和 Chrome */
+		}
+		.fish:nth-child(6n+5){
+			-webkit-animation: fish7 1s linear infinite alternate;	/* Safari 和 Chrome */
+		}
+		.fish:nth-child(6n+6){
+			-webkit-animation: fish8 1s linear infinite alternate;	/* Safari 和 Chrome */
+		}
+
+
+
+
+
+	</style>
+</head>
+<body>
+    <audio src="__ROOT__/Public/Home/css/REC20170711100043.mp3" autoplay="autoplay" loop="loop"></audio>
+
+    <img src="__ROOT__/Public/Home/img/game/back.png" alt="" class="backImg">
+<!-- 动的那些星星 -->
+    <img src="__ROOT__/Public/Home/img/game/p_30.png" alt="" class="qiuImg">
+    <img src="__ROOT__/Public/Home/img/game/p_31.png" alt="" class="xing1">
+    <img src="__ROOT__/Public/Home/img/game/p_32.png" alt="" class="xing2">
+    <img src="__ROOT__/Public/Home/img/game/p_33.png" alt="" class="xing3">
+    <img src="__ROOT__/Public/Home/img/game/p_34.png" alt="" class="xing4">
+    <img src="__ROOT__/Public/Home/img/game/p_35.png" alt="" class="xing5">
+    <img src="__ROOT__/Public/Home/img/game/p_31.png" alt="" class="xing6">
+    <img src="__ROOT__/Public/Home/img/game/p_35.png" alt="" class="xing7">
+<!-- 动的那些星星 -->
+<!-- 鱼 -->
+    <div id="fishs">
+		<foreach name="match" key="k" item='v'>
+		<img src="{$v.userface}" alt="" class="fish" name="{$v.username}，{$v.fishname}">
+		</foreach>
+	    <!--<img src="__ROOT__/Public/Home/img/game/free1.png" alt="" class="fish" name="玩家一，免费鱼一">-->
+	    <!--<img src="__ROOT__/Public/Home/img/game/free2.png" alt="" class="fish" name="玩家一，免费鱼一">-->
+	    <!--<img src="__ROOT__/Public/Home/img/game/free3.png" alt="" class="fish" name="玩家一，免费鱼一">-->
+	    <!--<img src="__ROOT__/Public/Home/img/game/free3.png" alt="" class="fish" name="玩家一，免费鱼一">-->
+	    <!--<img src="__ROOT__/Public/Home/img/game/free1.png" alt="" class="fish" name="玩家一，免费鱼一">-->
+	    <!--<img src="__ROOT__/Public/Home/img/game/free3.png" alt="" class="fish" name="玩家一，免费鱼一">-->
+	    <!--<img src="__ROOT__/Public/Home/img/game/free2.png" alt="" class="fish" name="玩家一，免费鱼一">-->
+	    <!--<img src="__ROOT__/Public/Home/img/game/free2.png" alt="" class="fish" name="玩家一，免费鱼一">-->
+	    <!--<img src="__ROOT__/Public/Home/img/game/free2.png" alt="" class="fish" name="玩家一，免费鱼一">-->
+	    <!--<img src="__ROOT__/Public/Home/img/game/money4.png" alt="" class="fish" name="玩家一，免费鱼一">-->
+	    <!--<img src="__ROOT__/Public/Home/img/game/money5.png" alt="" class="fish" name="玩家一，免费鱼一">-->
+	    <!--<img src="__ROOT__/Public/Home/img/game/money6.png" alt="" class="fish" name="玩家一，免费鱼一">-->
+	    <!--<img src="__ROOT__/Public/Home/img/game/money7.png" alt="" class="fish" name="玩家一，免费鱼一">-->
+	    <!--<img src="__ROOT__/Public/Home/img/game/money8.png" alt="" class="fish" name="玩家一，免费鱼一">-->
+	    <!--<img src="__ROOT__/Public/Home/img/game/money8.png" alt="" class="fish" name="玩家一，免费鱼一">-->
+	    <!--<img src="__ROOT__/Public/Home/img/game/money8.png" alt="" class="fish" name="玩家一，免费鱼一">-->
+	    <!--<img src="__ROOT__/Public/Home/img/game/money8.png" alt="" class="fish" name="玩家一，免费鱼一">-->
+	    <!--<img src="__ROOT__/Public/Home/img/game/money8.png" alt="" class="fish" name="玩家一，免费鱼一">-->
+	    <!--<img src="__ROOT__/Public/Home/img/game/money8.png" alt="" class="fish" name="玩家一，免费鱼一">-->
+	    <!--<img src="__ROOT__/Public/Home/img/game/money8.png" alt="" class="fish" name="玩家一，免费鱼一">-->
+    </div>
+<!-- 鱼 -->
+
+     
+
+
+	<script type="text/javascript">
+		$(function(){
+			$(".backImg").click(function() {
+			      window.history.go(-1);
+		   });
+			$('body').height($(window).height());
+			$(".fish").click(function() {
+				var name=$(this).attr('name');
+				show_info(name)
+			});	
+			var arr=[0,1,2,3,4];
+			var left,top;
+		    $(".fish").css({
+		   	  left:function(index, value) {
+		   	  	left=index;
+		   	  	switch(true)
+				{
+					case index==0:
+					    return index+"rem";
+					    break;
+					case index>=1&&index<=5:
+					    return index+"rem";
+					    break;
+					case index>5&&index<12:
+					    left=left-6;
+					    return left+"rem";
+					    break;
+					 case index>=12&&index<18:
+					    left=left-12;
+					    return left+"rem";
+					    break;
+					 case index>=18:
+					    left=left-18;
+					    return left+"rem";
+					    break;
+					default:
+
+				}
+
+		      },
+		   	  top:function(index, value) {
+		   	  	switch(true)
+				{
+				case index<=5:
+				    top=0;
+				    return top+"rem";
+				    break;
+				case index>5&&index<12:
+				    top=1;
+				    return top+"rem";
+				    break;
+				case index>=12&&index<18:
+				    top=2;
+				    return top+"rem";
+				    break;
+				case index>=18:
+				    top=3;
+				    return top+"rem";
+				    break;
+				default:
+				}
+		      }
+		    });
+
+
+		   
+		});
+	</script>
+</body>
+</html>

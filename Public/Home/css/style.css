@@ -1,0 +1,163 @@
+@keyframes myfirst
+{   0%{bottom: .7rem;right: .2rem;}
+	25%  {bottom: .9rem;right: .2rem;}
+	50%  {bottom: .5rem;right: .2rem;}
+	75%  {bottom: .5rem;right: .5rem;}
+	100% {bottom: .7rem;right: .2rem;}
+
+}
+
+@-webkit-keyframes myfirst
+{
+	0%{bottom: .7rem;right: .2rem;}
+	25%  {bottom: .9rem;right: .2rem;}
+	50%  {bottom: .5rem;right: .2rem;}
+	75%  {bottom: .5rem;right: .5rem;}
+	100% {bottom: .7rem;right: .2rem;}
+}
+
+
+@keyframes xing
+{
+	from {left: .1rem;bottom: .8rem;}
+	to {left: .2rem;bottom: .7rem;}
+}
+
+@-moz-keyframes xing
+{
+	from {left: .1rem;bottom: .8rem;}
+	to {left: .2rem;bottom: .7rem;}
+}
+
+@-webkit-keyframes xing
+{
+	from {left: .1rem;bottom: .8rem;}
+	to {left: .2rem;bottom: .7rem;}
+}
+
+@-o-keyframes xing
+{
+	from {left: .1rem;bottom: .8rem;}
+	to {left: .2rem;bottom: .7rem;}
+}
+
+
+@keyframes xing2
+{
+	from {left: 1rem;}
+	to {left: .7rem;}
+}
+@-webkit-keyframes xing2
+{
+	from {left: 1rem;}
+	to {left: .7rem;}
+}
+
+@keyframes xing3
+{
+	from {bottom: .8rem;}
+	to {bottom: .7rem;}
+}
+@-webkit-keyframes xing3
+{
+	from {bottom: .8rem;}
+	to {bottom: .7rem;}
+}
+
+@keyframes xing4
+{
+	from {bottom: .8rem;left: 2rem;}
+	to {bottom: .7rem;left: 1.8rem;}
+}
+@-webkit-keyframes xing4
+{
+	from {bottom: .8rem;left: 2rem;}
+	to {bottom: .7rem;left: 1.8rem;}
+}
+
+@keyframes xing5
+{
+	from {bottom: .8rem;left: 2.5rem;}
+	to {bottom: .7rem;left: 2.6rem;}
+}
+@-webkit-keyframes xing5
+{
+	from {bottom: .8rem;left: 2.5rem;}
+	to {bottom: .7rem;left: 2.6rem;}
+}
+
+@keyframes xing6
+{
+	from {left: .1rem;}
+	to {left: .2rem;}
+}
+@-webkit-keyframes xing6
+{
+	from {left: .1rem;}
+	to {left: .2rem;}
+}
+
+@keyframes xing7
+{
+	from {left: 2.8rem;}
+	to {left: 2.9rem;}
+}
+@-webkit-keyframes xing7
+{
+	from {left: 2.8rem;}
+	to {left: 2.9rem;}
+}
+.qiuImg{width: .8rem;position: absolute;bottom: .7rem;right: .2rem;
+animation: myfirst 3s linear infinite alternate;
+-moz-animation: myfirst 3s linear infinite alternate;	/* Firefox */
+-webkit-animation: myfirst 3s linear infinite alternate;	/* Safari 和 Chrome */
+-o-animation: myfirst 3s linear infinite alternate;	/* Opera */}
+.xing1{width: .2rem;position: absolute;bottom: .8rem;left: .1rem;
+animation: xing 1s linear infinite alternate;
+-moz-animation: xing 1s linear infinite alternate;	/* Firefox */
+-webkit-animation: xing 1s linear infinite alternate;	/* Safari 和 Chrome */
+-o-animation: xing 1s linear infinite alternate;	/* Opera */
+}
+.xing2{width: .2rem;position: absolute;bottom: .8rem;left: 1rem;
+	animation: xing2 2s linear infinite alternate;
+-moz-animation: xing2 2s linear infinite alternate;	/* Firefox */
+-webkit-animation: xing2 2s linear infinite alternate;	/* Safari 和 Chrome */
+-o-animation: xing2 2s linear infinite alternate;	/* Opera */
+}
+.xing3{width: .2rem;position: absolute;bottom: .8rem;left: 1.5rem;
+	animation: xing3 1s linear infinite alternate;
+-moz-animation: xing3 1s linear infinite alternate;	/* Firefox */
+-webkit-animation: xing3 1s linear infinite alternate;	/* Safari 和 Chrome */
+-o-animation: xing3 1s linear infinite alternate;	/* Opera */
+}
+.xing4{width: .2rem;position: absolute;bottom: .8rem;left: 2rem;
+	animation: xing4 1.5s linear infinite alternate;
+-moz-animation: xing4 1.5s linear infinite alternate;	/* Firefox */
+-webkit-animation: xing4 1.5s linear infinite alternate;	/* Safari 和 Chrome */
+-o-animation: xing4 1.5s linear infinite alternate;	/* Opera */
+}
+.xing5{width: .2rem;position: absolute;bottom: .8rem;left: 2.5rem;
+animation: xing5 1s linear infinite alternate;
+-moz-animation: xing5 1s linear infinite alternate;	/* Firefox */
+-webkit-animation: xing5 1s linear infinite alternate;	/* Safari 和 Chrome */
+-o-animation: xing5 1s linear infinite alternate;	/* Opera */}
+.xing6{width: .2rem;position: absolute;bottom: 1.2rem;left:.1rem;
+	animation: xing6 1s linear infinite alternate;
+-moz-animation: xing6 1s linear infinite alternate;	/* Firefox */
+-webkit-animation: xing6 1s linear infinite alternate;	/* Safari 和 Chrome */
+-o-animation: xing6 1s linear infinite alternate;	/* Opera */
+}
+.xing7{width: .2rem;position: absolute;bottom: .8rem;left: 2.8rem;
+	animation: xing7 1s linear infinite alternate;
+-moz-animation: xing7 1s linear infinite alternate;	/* Firefox */
+-webkit-animation: xing7 1s linear infinite alternate;	/* Safari 和 Chrome */
+-o-animation: xing7 1s linear infinite alternate;	/* Opera */
+}
+
+#fishs{padding: 0rem 0rem .2rem 0rem;margin-left: .7rem;position: relative;margin-top: .2rem;}
+.backImg{width: .5rem;position: absolute;top: .1rem;left: .1rem;z-index: 100;}
+.fish{z-index: 90;width: .7rem;position: absolute;}
+
+
+
+audio{position: absolute;top: 0;left: 0;visibility: hidden;}

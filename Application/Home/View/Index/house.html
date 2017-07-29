@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>房间pk</title>
+	<script type="text/javascript" src="__ROOT__/Public/Home/js/fontSize.js"></script>
+	<link rel="stylesheet" href="__ROOT__/Public/Home/css/common.css">
+	<link rel="stylesheet" href="__ROOT__/Public/Home/css/style.css">
+	<script type="text/javascript" src="__ROOT__/Public/Home/layer_mobile/layer.js"></script>
+	<script type="text/javascript" src="__ROOT__/Public/Home/js/jquery-3.1.1.min.js"></script>
+	<style type="text/css">
+		body{background: url('__ROOT__/Public/Home/img/game/house.png') repeat-x #0c3667;background-size: 100% auto;box-sizing: border-box;border-top: 1px solid transparent;}
+	   @keyframes fish1
+		{
+			from {left: 1rem;}
+			to {left: 1.2rem;}
+		}
+		@-webkit-keyframes fish1
+		{
+			from {left: 1rem;}
+			to {left: 1.2rem;}
+		}
+		 @keyframes fish2
+		{
+			from {right: 1.5rem;}
+			to {right: 1.7rem;}
+		}
+		@-webkit-keyframes fish2
+		{
+			from {right: 1.5rem;}
+			to {right: 1.7rem;}
+		}
+		body .layui-m-layer .layui-m-layer-msg{bottom: 0;}
+	   .fish1{width: 1.6rem;position: absolute;top: 1rem;left: 1rem;
+	   	transform:rotateY(180deg);
+	   	animation: fish1 1s linear infinite alternate;
+		-moz-animation: fish1 1s linear infinite alternate;	/* Firefox */
+		-webkit-animation: fish1 1s linear infinite alternate;	/* Safari 和 Chrome */
+		-o-animation: fish1 1s linear infinite alternate;	/* Opera */
+
+	   }
+	   .fish2{width: 1.6rem;position: absolute;top: 1rem;right: 1.5rem;
+	   		animation: fish2 1s linear infinite alternate;
+		-moz-animation: fish2 1s linear infinite alternate;	/* Firefox */
+		-webkit-animation: fish2 1s linear infinite alternate;	/* Safari 和 Chrome */
+		-o-animation: fish2 1s linear infinite alternate;	/* Opera */
+	   }
+	</style>
+</head>
+<body>
+    <audio src="css/REC20170711100043.mp3" autoplay="autoplay" loop="loop"></audio> 
+
+    <img src="__ROOT__/Public/Home/img/game/back.png" alt="" class="backImg">
+<!-- 动的那些星星 -->
+    <img src="__ROOT__/Public/Home/img/game/p_30.png" alt="" class="qiuImg">
+    <img src="__ROOT__/Public/Home/img/game/p_31.png" alt="" class="xing1">
+    <img src="__ROOT__/Public/Home/img/game/p_32.png" alt="" class="xing2">
+    <img src="__ROOT__/Public/Home/img/game/p_33.png" alt="" class="xing3">
+    <img src="__ROOT__/Public/Home/img/game/p_34.png" alt="" class="xing4">
+    <img src="__ROOT__/Public/Home/img/game/p_35.png" alt="" class="xing5">
+    <img src="__ROOT__/Public/Home/img/game/p_31.png" alt="" class="xing6">
+    <img src="__ROOT__/Public/Home/img/game/p_35.png" alt="" class="xing7">
+<!-- 动的那些星星 -->
+<!-- 鱼 -->
+    <div id="fishs">
+		<foreach name="all" key="k" item='v'>
+			<img src="{$v.userface}" alt="" class="fish<?php echo $k+1; ?> fishImg" name="{$v.username}，{$v.fishname}">
+		</foreach>
+	    <!--<img src="__ROOT__/Public/Home/img/game/free1.png" alt="" class="fish1 fishImg" name="玩家一，收费鱼5">-->
+	    <!--<img src="__ROOT__/Public/Home/img/game/free2.png" alt="" class="fish2 fishImg" name="玩家二，收费鱼5">-->
+    </div>
+<!-- 鱼 -->
+
+	<script type="text/javascript">
+		$(function(){
+			$(".backImg").click(function() {
+			      window.history.go(-1);
+		   });
+			$('body').height($(window).height());
+			$(".fishImg").click(function() {
+				var name=$(this).attr('name');
+				show_info(name)
+			});	
+		
+		});
+	</script>
+</body>
+</html>

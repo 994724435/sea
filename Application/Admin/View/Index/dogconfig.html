@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<include file="Common/header" />
+        <div id="page-wrapper">
+        <div class="graphs">
+	     <div class="xs">
+  	       <h3>产品修改(狗ID不可轻易更改)</h3>
+  	         <div class="tab-content">
+						<div class="tab-pane active" id="horizontal-form">
+							<form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">产品名</label>
+									<div class="col-sm-8">
+										<input type="text" name="name" value="{$res.name}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">产品类型</label>
+									<div class="col-sm-8">
+										<select class="form-control1" name="type">
+											<option value="{$res.type}">
+												<if condition="$res.type eq 2">道具<elseif condition="$res.type eq 1"/>种子<elseif condition="$res.type eq 3"/>果实</if>
+											</option>
+											<option value="1">种子</option>
+											<option value="2">道具</option>
+											<option value="3">果实</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">属性</label>
+									<div class="col-sm-8">
+										<select class="form-control1" name="attribute">
+
+											<option value="{$res.attribute}">
+												<if condition="$res.attribute eq 2">植物<elseif condition="$res.attribute eq 1"/>动物</if>
+											</option>
+											<option value="1">动物</option>
+											<option value="2">植物</option>
+										</select>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">产品图片</label>
+									<div class="col-sm-8">
+										<input type="text" name="pic" value="{$res.pic}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">产品图片</label>
+									<div class="col-sm-8">
+										<img src="{$res.pic}" alt="" style="width: 200px">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">上传图片</label>
+									<div class="col-sm-8">
+										<input type="file" onchange="previewImage(this)" name="thumb"/>
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">售卖价格（龙币）</label>
+									<div class="col-sm-8">
+										<input type="number" name="price" value="{$res.price}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">成熟后售卖价格（龙币）</label>
+									<div class="col-sm-8">
+										<input type="number" name="afterprice" value="{$res.afterprice}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">生命周期（天）</label>
+									<div class="col-sm-8">
+										<input type="number" name="life" value="{$res.life}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+								<!--<div class="form-group">-->
+									<!--<label for="focusedinput" class="col-sm-2 control-label">一块地播种的种子</label>-->
+									<!--<div class="col-sm-8">-->
+										<!--<input type="number" name="landnum" value="{$res.landnum}" class="form-control1" id="focusedinput" placeholder="">-->
+									<!--</div>-->
+									<!--<div class="col-sm-2">-->
+										<!--<p class="help-block"></p>-->
+									<!--</div>-->
+								<!--</div>-->
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">该种子结果子</label>
+									<div class="col-sm-8">
+										<input type="number" name="fruits" value="{$res.fruits}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">好友每次偷取果子</label>
+									<div class="col-sm-8">
+										<input type="number" name="stealfruits" value="{$res.stealfruits}" class="form-control1" id="focusedinput" placeholder="">
+									</div>
+									<div class="col-sm-2">
+										<p class="help-block"></p>
+									</div>
+								</div>
+							      <div class="panel-footer">
+									<div class="row">
+										<div class="col-sm-8 col-sm-offset-2">
+											<button class="btn-success btn">Submit</button>
+										</div>
+									</div>
+								 </div>
+								
+								
+							</form>
+						</div>
+					</div>
+
+ 
+	
+  </div>
+  <div class="copy_layout">
+      <p>Copyright &copy; 2016 name All rights reserved.</p>
+  </div>
+  </div>
+      </div>
+      <!-- /#page-wrapper -->
+   </div>
+    <!-- /#wrapper -->
+<!-- Nav CSS -->
+<link href="__ROOT__/Public/admin/css/custom.css" rel="stylesheet">
+<!-- Metis Menu Plugin JavaScript -->
+<script src="__ROOT__/Public/admin/js/metisMenu.min.js"></script>
+<script src="__ROOT__/Public/admin/js/custom.js"></script>
+ <script src="__ROOT__/Public/admin/js/bootstrap.min.js"></script>
+</body>
+</html>
